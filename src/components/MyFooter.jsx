@@ -13,7 +13,7 @@ const MyFooter = () => {
                     <div className='space-y-4 mb-8'>
                     <a href="/home" className="text-2xl font-semibold flex items-center space-x-3">
                     <img src={logo} alt="logo-image" className="w-16 inline-block items-center" />
-                    <span className="text-[#263238]">Brand</span> </a>
+                    <span className="text-[#263238]">Batoum</span> </a>
                     <div>
                         <p className='mb-1'>© 2010-2024 | Copyright | Fidealis.</p>
                         <p>All rights reserved</p>
@@ -23,7 +23,7 @@ const MyFooter = () => {
                         <div>
                             <Footer.Title title="about" />
                             <Footer.LinkGroup col>
-                                <Footer.Link href="#">Flowbite</Footer.Link>
+                                <Footer.Link href="#">batoum</Footer.Link>
                                 <Footer.Link href="#">Tailwind CSS</Footer.Link>
                             </Footer.LinkGroup>
                         </div>
@@ -31,7 +31,7 @@ const MyFooter = () => {
                             <Footer.Title title="Follow us" />
                             <Footer.LinkGroup col>
                                 <Footer.Link href="#">Github</Footer.Link>
-                                <Footer.Link href="#">Discord</Footer.Link>
+                                <Footer.Link href="#">Linkden</Footer.Link>
                             </Footer.LinkGroup>
                         </div>
                         <div>
