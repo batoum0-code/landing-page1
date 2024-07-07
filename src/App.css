@@ -9,6 +9,6 @@ header {
 }
 
 .btn-primary{
-    @apply px-7 py-2 bg-bandPrimary text-white rounded hover:bg-neutralDGrey
+    @apply px-7 py-2 bg-bandPrimary text-white rounded hover:bg-neutralDGrey font-serif tracking-widest 
     transition-all duration-300 hover:translate-y-4;
 }

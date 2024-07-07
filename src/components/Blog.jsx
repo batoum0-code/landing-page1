@@ -2,7 +2,8 @@ import React from "react";
 
 {/* import images */ }
 import img1 from '../assets/product1.jpg';
-
+import img2 from '../assets/product2.png';
+import img3 from '../assets/product3.png';
 
 
 const Blog = () => {
@@ -17,12 +18,12 @@ const Blog = () => {
     {
       id: 2,
       title: "What are your safeguarding responsibilities and how can you manage then?",
-      image: img1
+      image: img2
     },
     {
       id: 3,
       title: "Removing the Membership Model Triathlon Australia",
-      image: img1
+      image: img3
     }
   ]
 
@@ -42,26 +43,26 @@ const Blog = () => {
       {
         blogs.map((blog) => {
           return <div key={blog.id} className="mx-auto relative mb-12 cursor-pointer">
-            <img src={blog.image} alt="blog-image" className="lg:w-[360px] hover:scale-95 transition-all duration-300" />
+            <img src={blog.image} alt="blog-image" className="lg:w-[360px] lg:h-[300px] hover:scale-95 transition-all duration-300" />
             <div className="text-center px-4 py-8 bg-white shadow-lg rounded-md md:w-3/4 mx-auto
             absolute right-0 left-0 -bottom-[60px]">
-              <h3 className="mb-3 text-neutralGrey font-semibold">{blog.title}</h3> 
+              <h3 className="mb-3 text-neutralGrey font-semibold">{blog.title}</h3>
               <div className="flex items-center justify-center gap-8">
-              <a href="/" className="font-bold text-bandPrimary hover:text-neutral-700">
-              Read More
-              <svg
-              width="17"
-              height="11"
-              viewBox="0 0 17 11"
-              fill="none"
-              className="inline-block ml-2"
-              >
-                <path d="M12 9.3990L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69195L12 1.39905M15 5.39905L1 5.39905"
-                stroke="#4CAF4F"
-                />
+                <a href="/" className="font-bold text-bandPrimary hover:text-neutral-700">
+                  Read More
+                  <svg
+                    width="17"
+                    height="11"
+                    viewBox="0 0 17 11"
+                    fill="none"
+                    className="inline-block ml-2"
+                  >
+                    <path d="M12 9.3990L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69195L12 1.39905M15 5.39905L1 5.39905"
+                      stroke="#4CAF4F"
+                    />
 
-              </svg>
-              </a>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>

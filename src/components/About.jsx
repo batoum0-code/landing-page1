@@ -2,7 +2,7 @@ import icon1 from '../assets/icons/a.png';
 import icon2 from '../assets/icons/b.png';
 import icon3 from '../assets/icons/c.png';
 import icon4 from '../assets/icons/d.png';
-import img from '../assets/1.png';
+import img from '../assets/about.png';
 
 
 
