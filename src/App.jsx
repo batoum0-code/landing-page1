@@ -9,17 +9,21 @@ import Products from './components/Products';
 import Newsletter from './components/Newsletter';
 import MyFooter from './components/MyFooter';
 
+
+
+
+
+
 function App() {
   
 
-    
 
   return (
     <div>
-      
+    
       <Navbar/> 
       <Home/>
-      <Services/>
+      <Services />
       <About/>
       <Products/>
       <Blog/>

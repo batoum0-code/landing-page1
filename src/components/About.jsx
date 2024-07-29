@@ -5,16 +5,17 @@ import icon4 from '../assets/icons/d.png';
 import img from '../assets/about.png';
 
 
-
-
+{/*  import Reveal for react motion scroll */}
+import Reveal from '../motion';
 
 const About = () => {
 
 
 
-    return <div className="my-8">
+    return <div className="my-14">
 
             {/* about text */}
+            <Reveal>
 
             <div className="px-4 lg:px-14 md:w-11/12 mx-auto  flex flex-col md:flex-row justify-between items-center gap-12" id="about">
                 <div>
@@ -34,8 +35,10 @@ const About = () => {
                 </div>
             </div>
 
-            {/* company stats */}
+            </Reveal>
 
+            {/* company stats */}
+            <Reveal>
             <div className="px-4 lg:px-14 max-w-screen-2xl  bg-neutralSilver py-16">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-5">
                     <div className="md:w-1/2">
@@ -82,8 +85,9 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>;
+            </div></Reveal>
+        </div>
+    
 };
 
 export default About;

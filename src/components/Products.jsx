@@ -8,8 +8,13 @@ import logo5 from '../assets/e.png';
 import logo6 from '../assets/g.png';
 import product from '../assets/product.jpg';
 
+{/* import reveal for react motion scroll */}
+
+import Reveal from "../motion";
+
 const Products = () => {
-    return <div className="my-8" id="product">
+    return <Reveal>
+        <div className="my-16" id="product">
         <div className="px-4 lg:px-14 md:w-11/12 mx-auto  flex flex-col md:flex-row justify-between items-center gap-12">
             <div>
                 <img src={img} alt="about-img" />
@@ -81,7 +86,7 @@ const Products = () => {
         </div>
 
     </div>
-
+    </Reveal>
 
 };
 

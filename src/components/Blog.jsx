@@ -5,6 +5,9 @@ import img1 from '../assets/product1.jpg';
 import img2 from '../assets/product2.png';
 import img3 from '../assets/product3.png';
 
+{/* import reveal for react motion scroll */}
+
+import Reveal from "../motion";
 
 const Blog = () => {
 
@@ -28,7 +31,8 @@ const Blog = () => {
   ]
 
 
-  return <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-12" id="faq">
+  return <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-16" id="faq">
+      <Reveal>
     <div className="text-center md:w-1/2 mx-auto">
       <h2 className="text-4xl text-neutralDGrey font-semibold mb-4">Caring is new marketing</h2>
       <p className="text-sm text-neutralGrey mb-8 md:w-3/4 mx-auto">
@@ -36,8 +40,9 @@ const Blog = () => {
         more , See who's joining the community, read about how our community are inreasing their membership
         incore and lots more
       </p>
-    </div>
+    </div></Reveal>
 
+    <Reveal>
     {/* all blogs */}
     <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-between">
       {
@@ -68,8 +73,9 @@ const Blog = () => {
           </div>
         })
       }
-    </div>
-  </div>;
+    </div></Reveal>
+  </div>
+  
 };
 
 export default Blog;
