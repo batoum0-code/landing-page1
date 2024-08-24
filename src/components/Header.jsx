@@ -7,7 +7,7 @@ import { FaXmark, FaBars } from "react-icons/fa6";
 
 
 
-const Navbar = () => {
+const Header = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
@@ -49,7 +49,7 @@ const Navbar = () => {
             <div className="flex justify-between items-center text-base gap-8">
             <a href="/home" className="text-2xl font-semibold flex items-center space-x-3 ">
             <img src={logo} alt="logo-image" className="w-10 inline-block items-center" />
-            <span className="text-[#263238] font-serif tracking-widest">BATOU<span className={`${isSticky ? "" : "text-bandPrimary"}`}>M</span></span> </a>
+            <span className="text-[#263238] font-serif tracking-widest">sdfkj<span className={`${isSticky ? "" : "text-bandPrimary"}`}>M</span></span> </a>
 
             {/* nav items for large devices */}
 
@@ -102,4 +102,4 @@ const Navbar = () => {
 )
 };
 
-export default Navbar;
+export default Header;

@@ -1,6 +1,5 @@
 import React from "react";
 {/* import Components  */ }
-import Navbar from '../components/Navbar';
 import Home from '../components/Home';
 import Services from '../components/Services';
 import About from '../components/About';
@@ -9,11 +8,14 @@ import Products from '../components/Products';
 import Newsletter from '../components/Newsletter';
 import MyFooter from '../components/MyFooter';
 import ChatBoot from "../components/ChatBoot";
+import Header from '../components/Header';
 
 const LandingPage = () => {
     return <div>
-        <ChatBoot/>
+        
+        <Header/>
         <Home />
+        <ChatBoot/>
         <Services />
         <About />
         <Products />
