@@ -13,7 +13,6 @@ import ChatBoot from "../components/ChatBoot";
 const LandingPage = () => {
     return <div>
         <ChatBoot/>
-        <Navbar/>
         <Home />
         <Services />
         <About />
