@@ -1,94 +1,104 @@
-import React  from "react";
-import logo1 from '../assets/logo1.png';
-import logo2 from '../assets/logo2.png';
-import logo3 from '../assets/logo3.png';
-import logo4 from '../assets/logo4.png';
-import logo5 from '../assets/logo5.png';
+import React, {useState, useEffect} from "react";
+import logo from '../assets/logo.png';
+import { Link} from "react-scroll";
 
-import Reveal from "../motion";
+{/* import react icons */}
+import { FaXmark, FaBars } from "react-icons/fa6";
 
 
 
+const Navbar = () => {
 
-const Services = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
 
-    const services = [
-        {
-            id: 1,
-            title: "Membership Organisation",
-            description: "Our membership management software provides full automation of membership renwals and payments",
-            img: logo1,
-        },
-        {
-            id: 2,
-            title: "Ntional Associacion",
-            description: "Our membership management software provides full automation of membership renwals and payments",
-            img: logo5,
-        },
-        {
-            id: 3,
-            title: "Clubs And Groups",
-            description: "Our membership management software provides full automation of membership renwals and payments",
-            img: logo3
-        },
+    // set toggle Menu
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setIsSticky(true);
+            } else {
+                setIsSticky(false);
+            }
+        }
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.addEventListener('scroll', handleScroll);
+        }
+    }, []);
+
+    // navitems array
+
+    const navItems = [
+        { link: "Home", path: "home" },
+        { link: "Services", path: "services" },
+        { link: "About", path: "about" },
+        { link: "Product", path: "product" },
+        { link: "Testimonia", path: "testimonia" },
+        { link: "FAQ", path: "faq" },
     ];
 
 
-return <div  className="md:px-14 px-4 py-16 max-w-screen-2xl mx-auto" id="services">
-        <div className="text-center my-8">
-            <Reveal>
-            <div>
-            <h2 className="text-4xl text-neutralDGrey font-semibold mb-2">Our Clients</h2>
-            <p className="text-neutralGrey ">We have been working some Forture 500+ clients</p>
-            </div>
-            </Reveal>
-            {/* company logo */}
-            <Reveal>
-            <div className="my-12 flex flex-wrap justify-between items-center gap-8">
-                <img src={logo1} alt="company-logo" className="w-20" />
-                <img src={logo2} alt="company-logo" className="w-20" />
-                <img src={logo3} alt="company-logo" className="w-20" />
-                <img src={logo4} alt="company-logo" className="w-20" />
-                <img src={logo2} alt="company-logo" className="w-20" />
-                <img src={logo5} alt="company-logo" className="w-20" />
-                <img src={logo2} alt="company-logo" className="w-20" />
-            </div></Reveal>
 
-            {/* services card */}
-            <Reveal>
-            <div className="mt-20 md:w-1/2 mx-auto text-center">
-                <h2 className="text-4xl text-neutralDGrey font-semibold mb-3">
-                    Manage your entire comunity in : single system
-                </h2>
-                <p className="text-neutralGrey">
-                    Who is Nextcent suitable for?
-                </p>
-            </div>
-            </Reveal>
+    return  (   
+    <header className="w-full bg-white md:bg-transparent fixed top-0 left-0 right-0">
+        <nav className={`py-4 lg:px-14 px-4 ${isSticky ? "sticky top-0 right-0 border-b bg-white duration-300" : ""}`}>
+            <div className="flex justify-between items-center text-base gap-8">
+            <a href="/home" className="text-2xl font-semibold flex items-center space-x-3 ">
+            <img src={logo} alt="logo-image" className="w-10 inline-block items-center" />
+            <span className="text-[#263238] font-serif tracking-widest">ELITE <span className={`${isSticky ? "" : "text-bandPrimary"}`}>ACCESS</span></span> </a>
 
-            {/* cards */}
-            <Reveal>
-            <div className="mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12">
+            {/* nav items for large devices */}
+
+            <ul className="md:flex space-x-12 hidden">
+            {
+                navItems.map( ({link, path})=> (
+                    <Link key={path} spy={true} smooth={true} offset={-100} 
+                    to={path} className="block text-base cursor-pointer text-gray900 
+                    hover:text-bandPrimary first:font-meduim " Link>{link}</Link>
+                ))
+            }
+            </ul>
+            
+            {/* btn for large devices */}
+
+            <div className="space-x-12 hidden lg:flex items-center">
+                <a href="/" className="hidden lg:flex items-center text-bandPrimary
+                hover:text-gray900">Login</a>
+                <button className="bg-bandPrimary text-white py-2 px-4 transition-all duration-300 rounded
+                hover:bg-neutralDGrey">Sign up</button>
+            </div>
+
+            {/* menu for only mobile devices  */}
+
+            <div className="md:hidden">
+                <button onClick={()=> setIsMenuOpen(!isMenuOpen)} className="">
+                    {
+                        isMenuOpen ? (<FaXmark 
+                        className=""/>) : (<FaBars 
+                        className=""/>)
+                        
+                    }
+                </button>
+            </div>
+            </div>
+
+            {/* navvgtrfcv items for mobile devices */}
+
+            <div className={`space-y-4 px-4 mt-16 py-2 bg-bandPrimary 
+                ${isMenuOpen ? "block fixed top-0 right-0 left-0" : "hidden"}`}>
                 {
-                    services.map(({ id, title, description, img }) => (
-                        <div key={id} className="px-4 py-8 text-center md:w-[300px]
-                        mx-auto md:h-80 rounded-md shadow cursor-pointer hover:translate-y-5 hover:border-b-4
-                        hover:border-indigo-700 transition-all flex items-center justify-center
-                        h-full">
-                            <div>
-                                <div className="bg-[#E8F5E9] mb-4 h-14 w-1/4 mx-auto rounded-tl-3xl"><img src={img} alt="" /></div>
-                                <h1 className="text-2xl">{title}</h1>
-                                <p>{description}</p>
-                            </div>
-                        </div>
+                    navItems.map( ({link, path})=> (
+                        <Link to={path} key={path} className="block text-base text-white hover:text-gray900
+                        first:font-medium">{link}</Link>
                     ))
                 }
-            </div></Reveal>
-
-
-        </div>
-    </div>
-    ;
+            </div>
+        </nav>
+    </header>
+)
 };
 
-export default Services;
+export default Navbar;
