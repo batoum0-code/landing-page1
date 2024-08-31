@@ -1,9 +1,9 @@
 {/* import brand logo */}
-import logo from '../assets/logo.png';
+import logo from '../assets/logo/c.png';
 
 {/* import flowbite elements */ }
 import { Footer } from "flowbite-react";
-import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
+import { BsFacebook, BsInstagram,BsTiktok } from "react-icons/bs";
 
 const MyFooter = () => {
     return (
@@ -11,11 +11,11 @@ const MyFooter = () => {
             <div className="w-full">
                 <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                     <div className='space-y-4 mb-8'>
-                    <a href="/home" className="text-2xl font-semibold flex items-center space-x-3">
+                    <a href="/" className="md:text-3xl text-2xl font-semibold flex items-center space-x-3">
                     <img src={logo} alt="logo-image" className="w-16 inline-block items-center" />
-                    <span className="text-[#263238]">Batoum</span> </a>
+                    <span className="text-[#263238] font-mono">ELITE ACCESS</span> </a>
                     <div>
-                        <p className='mb-1'>© 2010-2024 | Copyright | Fidealis.</p>
+                        <p className='mb-1'>© 2023-2024 | Copyright | Fidealis.</p>
                         <p>All rights reserved</p>
                     </div>
                     </div>
@@ -23,15 +23,15 @@ const MyFooter = () => {
                         <div>
                             <Footer.Title title="about" />
                             <Footer.LinkGroup col>
-                                <Footer.Link href="#">batoum</Footer.Link>
-                                <Footer.Link href="#">Tailwind CSS</Footer.Link>
+                                <Footer.Link href="#">Elite Access</Footer.Link>
+                                <Footer.Link href="#">address</Footer.Link>
                             </Footer.LinkGroup>
                         </div>
                         <div>
                             <Footer.Title title="Follow us" />
                             <Footer.LinkGroup col>
-                                <Footer.Link href="#">Github</Footer.Link>
-                                <Footer.Link href="#">Linkden</Footer.Link>
+                                <Footer.Link href="#">Facebook</Footer.Link>
+                                <Footer.Link href="#">Instagram</Footer.Link>
                             </Footer.LinkGroup>
                         </div>
                         <div>
@@ -45,13 +45,11 @@ const MyFooter = () => {
                 </div>
                 <Footer.Divider />
                 <div className="w-full sm:flex sm:items-center sm:justify-between">
-                    <Footer.Copyright href="#" by="Batoum" year={2022} />
+                    <Footer.Copyright href="https://batoum.vercel.app/" by="Batoum" year={2024} />
                     <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-                        <Footer.Icon href="#" icon={BsFacebook} />
-                        <Footer.Icon href="#" icon={BsInstagram} />
-                        <Footer.Icon href="#" icon={BsTwitter} />
-                        <Footer.Icon href="#" icon={BsGithub} />
-                        <Footer.Icon href="#" icon={BsDribbble} />
+                        <Footer.Icon href="#" icon={BsFacebook} className='text-blue-600'/>
+                        <Footer.Icon href="#" icon={BsInstagram} className='text-pink-600'/>
+                        <Footer.Icon href="#" icon={BsTiktok} className='text-slate-600'/>
                     </div>
                 </div>
             </div>

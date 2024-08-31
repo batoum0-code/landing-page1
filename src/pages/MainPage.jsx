@@ -12,6 +12,7 @@ import Header from '../components/Header';
 const MainPage = () => {
 
     return <div>
+        <ChatBoot/>
         <Header/>
         <Home/>
         <About/>

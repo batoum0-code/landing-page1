@@ -1,8 +1,12 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
-import img1 from '../assets/0.png';
-import img2 from '../assets/1.png';
-import img3 from '../assets/2.png';
+//import img1 from '../assets/0.png';
+//import img2 from '../assets/1.png';
+// import img3 from '../assets/2.png;
+
+import img1 from '../assets/elite/1.jpg';
+import img2 from '../assets/elite/2.jpg';
+import img3 from '../assets/elite/3.jpg';
 
 
 const Home = () => {
@@ -63,4 +67,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;  

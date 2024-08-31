@@ -75,8 +75,10 @@ const Header = () => {
 
                         <button
                             onClick={() => navigate('/contactus')}
-                            className="bg-bandPrimary text-white py-2 px-4 transition-all duration-300 rounded
-                hover:bg-neutralDGrey">Get In Tuch <GiLetterBomb className="inline-block text-2xl text-black" /></button>
+                            className="bg-bandPrimary text-white py-2 px-4 
+                            hover:text-bandPrimary hover:bg-white font-mono transition-all duration-300 rounded
+                hover:bg-neutralDGrey">Get In Touch <GiLetterBomb className="inline-block text-2xl text-black 
+                hover:text-bandPrimary" /></button>
                     </div>
 
                     {/* menu for only mobile devices  */}

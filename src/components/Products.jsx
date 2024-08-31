@@ -6,7 +6,7 @@ import logo3 from '../assets/c.png';
 import logo4 from '../assets/d.png';
 import logo5 from '../assets/e.png';
 import logo6 from '../assets/g.png';
-import product from '../assets/product.jpg';
+import product from '../assets/elite/4.jpg';
 
 {/* import reveal for react motion scroll */}
 
@@ -17,7 +17,7 @@ const Products = () => {
         <div className="my-16" id="product">
         <div className="px-4 lg:px-14 md:w-11/12 mx-auto  flex flex-col md:flex-row justify-between items-center gap-12">
             <div>
-                <img src={img} alt="about-img" />
+                <img src={img} alt="" />
             </div>
             <div className="md:w-3/5 mx-auto">
                 <h2 className="text-4xl text-neutralDGrey font-semibold mb-4 md:w-4/5">
