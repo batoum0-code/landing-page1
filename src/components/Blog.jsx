@@ -1,9 +1,9 @@
 import React from "react";
 
 {/* import images */ }
-import img1 from '../assets/product1.jpg';
-import img2 from '../assets/product2.png';
-import img3 from '../assets/product3.png';
+import img1 from '../assets/elite/39.jpg';
+import img2 from '../assets/elite/19.jpg';
+import img3 from '../assets/elite/5.jpg';
 
 {/* import reveal for react motion scroll */}
 
@@ -29,6 +29,7 @@ const Blog = () => {
       image: img3
     }
   ]
+
 
 
   return <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto my-16" id="faq">
@@ -65,7 +66,6 @@ const Blog = () => {
                     <path d="M12 9.3990L15.2929 6.10615C15.6834 5.71563 15.6834 5.08246 15.2929 4.69195L12 1.39905M15 5.39905L1 5.39905"
                       stroke="#4CAF4F"
                     />
-
                   </svg>
                 </a>
               </div>

@@ -6,23 +6,28 @@ import { Link } from "react-scroll";
 import { GiLetterBomb } from "react-icons/gi";
 import { FaXmark, FaBars } from "react-icons/fa6";
 
+
 // import useNavigate from react router dom to navigate throu pages
 import { useNavigate } from "react-router-dom";
+
+
+
+
 
 // header component function 
 const Header = () => {
 
 
     // use useNavigate to navigate to an other page
-
     const navigate = useNavigate();
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
 
-    // set toggle Menu
+
 
     useEffect(() => {
+    
         const handleScroll = () => {
             if (window.scrollY > 100) {
                 setIsSticky(true);
@@ -38,7 +43,6 @@ const Header = () => {
     }, []);
 
     // navitems array
-
     const navItems = [
         { link: "Home", path: "home" },
         { link: "Services", path: "services" },
@@ -55,7 +59,7 @@ const Header = () => {
                 <div className="flex justify-between items-center text-base gap-8">
                     <a href="/home" className="text-2xl font-semibold flex items-center space-x-3 ">
                         <img src={logo} alt="logo-image" className="w-10 inline-block items-center rounded-r-md" />
-                        <span className="text-[#374146] font-serif tracking-widest"><span className={`${isSticky ? "" : "text-bandPrimary"}`}> ELITE </span> </span> <span className={`${isSticky ? " text-bandPrimary" : ""}`}>aCcess</span></a>
+                        <span className="text-[#374146] font-serif tracking-widest"><span className={`${isSticky ? "" : "text-bandPrimary"}`}> ELITE </span> </span> <span className={`${isSticky ? " text-bandPrimary" : ""}`}>aCcesS</span></a>
 
                     {/* nav items for large devices */}
 

@@ -4,9 +4,9 @@ import { Carousel } from "flowbite-react";
 //import img2 from '../assets/1.png';
 // import img3 from '../assets/2.png;
 
-import img1 from '../assets/elite/1.jpg';
-import img2 from '../assets/elite/2.jpg';
-import img3 from '../assets/elite/3.jpg';
+import img1 from '../assets/01.webp';
+import img2 from '../assets/02.webp';
+import img3 from '../assets/07.webp';
 
 
 const Home = () => {
@@ -17,10 +17,10 @@ const Home = () => {
     <div className="px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen">
     
       <Carousel className="w-full mx-auto">
-        <div className="my-28 md:my8 py-12 flex h-full items-center justify-center 
+        <div className="my-28 md:my-8 py-12 flex h-full items-center justify-center 
         flex-col md:flex-row-reverse gap-12">
           <div>
-            <img src={img1} alt="image-banner1" className="" />
+            <img src={img1} alt="image-banner1" className="md:pr-10" />
           </div>
           {/* hero text */}
           <div className="md:w-full">
@@ -31,10 +31,10 @@ const Home = () => {
               <button className="btn-primary">Register</button>
           </div> 
         </div>
-        <div className="my-28 md:my8 py-12 flex h-full items-center justify-center 
+        <div className="my-28 md:my-8 py-12 flex h-full items-center justify-center 
         flex-col md:flex-row-reverse gap-12">
           <div>
-            <img src={img2} alt="image-banner1" className="" />
+            <img src={img2} alt="image-banner1" className="md:pr-10" />
           </div>
           {/* hero text */}
           <div className="md:w-full">
@@ -45,10 +45,10 @@ const Home = () => {
               <button className="btn-primary">Register</button>
           </div> 
         </div>
-        <div className="my-28 md:my8 py-12 flex h-full items-center justify-center 
+        <div className="my-28 md:my-8 py-12 flex h-full items-center justify-center 
         flex-col md:flex-row-reverse gap-12">
           <div>
-            <img src={img3} alt="image-banner1" className="" />
+            <img src={img3} alt="image-banner1" className="md:pr-10" />
           </div>
           {/* hero text */}
           <div className="md:w-full">
