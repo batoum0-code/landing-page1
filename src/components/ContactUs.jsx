@@ -108,13 +108,14 @@ const ContactUs = () => {
 
 
 
+
   return (
     <div className="w-screen" >
       <div className="flex flex-row">
 
         {/* start get client infos through form inputs */}
 
-        <div className="md:w-[50%] ">
+        <div className="md:w-[50%] w-full  ">
           <form onSubmit={handleSubmit} className='bg-black/90 h-screen  py-9 px-9 w-full'>
             <div>
               <h3 className='text-[#faf4e9] text-[40px] pb-3'>Get In touch Right Now</h3>
@@ -179,7 +180,7 @@ const ContactUs = () => {
         relative overflow-hidden px-6 py-3 
         font-semibold text-sm
         transition-all duration-300 ease-out
-        ${isHovered ? 'text-white/80' : 'text-bandPrimary bg-gray-700'}
+        ${isHovered ? 'text-white/80' : 'text-bandPrimary bg-gray-200'}
         focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50
       `}
               onMouseEnter={() => setIsHovered(true)}
@@ -188,7 +189,7 @@ const ContactUs = () => {
               <span className="relative z-10">Git In Tuch Now 🤗</span>
               <div
                 className={`
-          absolute inset-0 bg-gradient-to-tr from-[#FFA500] via-bandPrimary to-[#ffd700]
+          absolute inset-0 bg-bandPrimary
           transition-all duration-1000 ease-in-out
           ${isHovered ? 'opacity-100 animate-golden-walk' : 'opacity-0 translate-x-full'}
         `}
@@ -227,20 +228,20 @@ const ContactUs = () => {
 
         {/* start contact content */}
 
-        <div className=" w-[50%] h-screen ">
+        <div className=" w-[50%] h-screen hidden lg:inline-block ">
           {
             isHovered ? (<div className="w-full h-full ">
               <div
                 className={`
-      flex flex-col justify-center items-center w-full h-full relative overflow-hidden
-      transition-all duration-1000 ease-in-out
-      ${isHovered ? 'bg-gradient-to-tr from-[#f21d48] via-[#f21d48] to-[#f21d48]' : 'bg-none'}
+                            flex flex-col justify-center items-center w-full h-full relative overflow-hidden
+                            transition-all duration-1000 ease-in-out
+      ${isHovered ? 'bg-teal-400' : 'bg-none'}
     `}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
                 <div>
-                  <p className="text-bandPrimary text-center">Thank you for visiting our website! We appreciate your time and hope you found everything you were looking for. </p>
+                  <p className="text-black text-center">Thank you for visiting our website! We appreciate your time and hope you found everything you were looking for. </p>
                 </div>
                 <img
                   src={logo}
@@ -251,9 +252,9 @@ const ContactUs = () => {
                 <div className="pt-20 flex flex-col gap-3 justify-between bg-transparent text-white">
 
                   <span className="text-center">designed and developed by
-                    <a href="https://batoum.vercel.app/" className="text-[#ffde03] underline "> batoum samir </a></span>
+                    <a href="https://batoum.vercel.app/" className="text-[#ffde03] underline text-[14px] "> batoum samir </a></span>
                   <span className="text-[12px] text-center">
-                    © 2024Batoum
+                    2024 © Elite Access
                   </span>
                 </div>
                 <style jsx>{`
@@ -264,24 +265,24 @@ const ContactUs = () => {
                             100% { transform: translateX(0); opacity: 0; }
                             }
                             .animate-golden-walk {
-                            
+
                             animation: golden-walk .5s ease-in-out;
                             }
 
                           `}</style>
               </div></div>)
               :
-              (<div className=" flex flex-col gap-8 justify-center items-center h-full w-full bg-gradient-to-r from-black/90 to-black/85 border-l-[.1rem] border-white">
+              (<div className=" flex flex-col gap-8 justify-center items-center h-full w-full bg-gradient-to-r from-black/90 to-black/85  border-dotted border-[#ffde03] border-l-2">
                 <div className="w-[550px]">
                   <h2 className="text-slate-200 text-center"> Feel free to ask anything you need through your preferred method or visit our <br />Agence on-site!</h2>
                 </div>
                 <div className="contact infos flex gap-9">
                   <div className="text-center">
-                    <h4 className="text-white"><FaPhone className="inline-block text-[#a8a58c]" /> Phone:</h4>
+                    <h4 className="text-white"><FaPhone className="inline-block text-[#ffde03] pr-1 text-[20px]" /> Phone:</h4>
                     <span className="text-white"> +212 696550985</span>
                   </div>
                   <div className="text-center">
-                    <h4 className="text-white"><MdOutlineAttachEmail className="inline-block text-[#ffde03]" />  Email:</h4>
+                    <h4 className="text-white"><MdOutlineAttachEmail className="inline-block text-[#ffde03] pr-1 text-[20px]" />  Email:</h4>
                     <span className="text-white">gourobusiness0@gmail.com</span>
                   </div>
                 </div>

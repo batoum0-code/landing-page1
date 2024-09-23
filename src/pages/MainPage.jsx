@@ -6,8 +6,9 @@ import Blog from '../components/Blog';
 import Products from '../components/Products';
 import Newsletter from '../components/Newsletter';
 import MyFooter from '../components/MyFooter';
-import ChatBoot from "../components/ChatBoot";
 import Header from '../components/Header';
+
+import ChatBoot from "../components/ChatBoot";
 
 const MainPage = () => {
 
