@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { BedDouble, Bath, SquareFoot, MapPin, Heart } from 'lucide-react'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
+import { BedDouble, Bath, SquareBottomDashedScissors , MapPin, Heart } from 'lucide-react';
 
 
 
@@ -86,7 +87,7 @@ const PropertyCard = ({ property }) => {
                         <span>{property.bathrooms} Baths</span>
                     </div>
                     <div className="flex items-center">
-                        <SquareFoot className="w-5 h-5 mr-1" />
+                        <SquareBottomDashedScissors  className="w-5 h-5 mr-1" />
                         <span>{property.area} sqft</span>
                     </div>
                 </div>
@@ -100,8 +101,8 @@ const PropertyCard = ({ property }) => {
     )
 }
 
-export default function Rent() {
-    const [filter, setFilter] = useState < 'all' | 'rent' | 'sale' > ('all')
+    function Rent() {
+    const [filter, setFilter] = useState ('all')
 
     const filteredProperties = properties.filter(p =>
         filter === 'all' || p.type === filter
@@ -145,3 +146,5 @@ export default function Rent() {
         </div>
     )
 }
+
+export default Rent;

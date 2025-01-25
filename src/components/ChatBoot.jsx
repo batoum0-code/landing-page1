@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageCircleMore , X, Send } from 'lucide-react'
+import { MessageCircleMore, X, Send } from 'lucide-react'
 import logo from '../assets/logo/d.png';
 
 
@@ -18,7 +18,7 @@ const ChatBoot = () => {
   const [isChatOpen, setIsChatOpen] = useState(false)
   const [message, setMessage] = useState('')
 
-  
+
   const whatsappNumber = "+212696550985"
   const companyName = "Elite Access"
 
@@ -80,14 +80,14 @@ const ChatBoot = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      
+
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsChatOpen(!isChatOpen)}
         className="bg-green-600 text-white p-3  rounded-full shadow-lg hover:bg-bandPrimary transition-colors"
       >
-        <MessageCircleMore  size={33} />
+        <MessageCircleMore size={33} className='hover:text-yellow-100' />
       </motion.button>
     </div>
   )
