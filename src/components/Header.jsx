@@ -59,7 +59,7 @@ const Header = () => {
                 <div className="flex justify-between items-center text-base gap-8">
                     <a href="/home" className="text-2xl font-semibold flex items-center space-x-3 ">
                         <img src={logo} alt="logo-image" className="w-10 inline-block items-center rounded-r-md" />
-                        <span className="text-[#374146] font-serif tracking-widest"><span className={`${isSticky ? "" : "text-bandPrimary"}`}> ELITE </span> </span> <span className={`${isSticky ? " text-bandPrimary" : ""}`}>aCcesS</span></a>
+                        <span className="text-[#374146] font-serif tracking-widest"><span className={`${isSticky ? "" : "text-bandPrimary"}`}> Tamazirt <span className="text-6xl font-extrabold">.</span></span> </span> <span className={`${isSticky ? " text-bandPrimary" : ""}`}>aCcesS</span></a>
 
                     {/* nav items for large devices */}
 
